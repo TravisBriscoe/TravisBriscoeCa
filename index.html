@@ -3,93 +3,258 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Web design and development by Travis Briscoe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="stylesheet" href="index2.css" />
-        <script defer src="index.js"></script> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style-1.css">
+        <script defer src="resources/js/index.js"></script>
         <title>travisbriscoe.ca - Main Page</title>
     </head>
     <body>
-        <header>
-            <a id="header__badge-1" href="/"><h1>TravisBriscoe.ca</h1></a>
-            <a id="header__badge-2" href="mailto:travis.briscoe@gmail.com"
-                >contact</a
-            >
-        </header>
-        <div class="main__page">
-            <div class="nav__bar">
-                <nav>
-                    <img
-                        id="menu__icon"
-                        class="hidden"
-                        src="img/menu_icon.svg"
-                        alt="Menu icon"
-                    />
-                    <a href="#" id="link__home" class="hidden">Home</a>
-                    <a href="#" id="link__about">About</a>
-                    <a href="http://www.anomicaphasia.ca" id="link__podcast"
-                        >Blog</a
-                    >
-                    <a href="#" id="link__work">My Work</a>
-                    <a href="#" id="link__portfolio">Portfolio</a>
-                    <a href="#" class="link__contact">Contact</a>
-                    <a href="#" href="#" class="nav__external-show">Links</a>
-                    <ul id="nav__external-links" class="invisi">
-                        <li>
-                            <a href="www.github.com/anomicaphasia">Github</a>
-                        </li>
-                        <li>
-                            <a href="www.twitter.com/anomicaphasia">Twitter</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="main__content">
-                <div class="main__content welcome">
-                    <h1>Welcome!</h1>
-                    <p>
-                        This is a place where you can learn about me, who I am,
-                        and what I do. Feel free to click on the links on the
-                        left and learn about everything I can offer for you or
-                        your business. Don't forget to contact me if you have
-                        any questions.
-                    </p>
+        <div class="wrapper">
+            <header class="header">
+                <div>
+                    <div class="header__top--left">
+                        <a href="/"><h1>TravisBriscoe.ca</h1></a>
+                    </div>
+                    <div class="header__top--right">
+                        <a href="mailto:travis.briscoe@gmail.com"><i class="ion-android-mail header__top--icon"></i>travis.briscoe@gmail.com</a><br />
+                        <a href="tel:+13433646936"><i class="ion-android-phone-portrait header__top--icon"></i>+1 343-364-6936</a>
+                    </div>
                 </div>
-                <div class="main__content about hidden">
-                    <h2>About me:</h2>
-                    <p>
-                        I was born in Canada during 1980. When I was young I got
-                        quickly addicted to computers. Life, however, took it's
-                        own turn and I didn't get anywhere into the computer
-                        market that I had planned when I was younger. For the
-                        past 20+ years I've been working as a cook but as
-                        COVID-19 recently hit the world over, I decided to take
-                        control of myself and used the time off work to learn a
-                        new skill and start working in the field I was always
-                        interested in but never had the resources to achieve.
-                    </p>
-                    <p>
-                        I've also always wanted to work for myself, and with the
-                        way the world is these days, working remotely from home
-                        seems like a good idea that will allow me to achieve a
-                        steady finacial flow, keep from spreading COVID-19, and
-                        give back to a community and technology I've loved for
-                        so long.
-                    </p>
-                    <p>
-                        In September 2020, I enrolled myself into a few courses
-                        on the
-                        <a href="www.udemy.com">Udemy</a> learning platform, one
-                        of which was Web Developer. I've also taken extra
-                        courses in JavaScript, NodeJS, and MongoDB. I also plan
-                        on taking courses in Python and Java, and if my cards
-                        play right I'd like to get into Mobile Development.
-                    </p>
+            </header>
+            <div class="body__wrapper">
+                <div>
+                    <div class="nav__bar">
+                        <nav class="nav__bar--nav">
+                            <i id="menu__bar--icon" class="ion-navicon-round hidden"></i>
+                            <ul class="nav__bar--items">
+                                <li>
+                                    <a href="#" class="about-this hidden">About This Page</a>
+                                    <span class="nav__bar--replace-links-page">About This Page</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="about-me-link">About Me</a>
+                                    <span class="nav__bar--replace-links-about hidden">About Me</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="my-business-link">My Business</a>
+                                    <span class="nav__bar--replace-links-business hidden">My Business</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="my-credentials-link">Credentials</a>
+                                    <span class="nav__bar--replace-links-creds hidden">Credentials</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="my-portfolio-link">Portfolio</a>
+                                    <span class="nav__bar--replace-links-port hidden">Portfolio</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="contact-me-link">Contact</a>
+                                    <span class="nav__bar--replace-links-contact hidden">Contact</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="main__conent podcast hidden"></div>
-                <div class="main__content podcast hidden"></div>
-                <div class="main__content portfolio hidden"></div>
-                <div class="main__content contact hidden"></div>
+                <section class="main__content welcome">
+                    <div class="welcome">
+                        <div>
+                            <h2>About This Page</h2>
+                            <p>
+                                This is a simple, barebones, material-type design. The colours don't jump too much and they never change. The navigation bar is on the left which will only change when being viewed on a small screen such as a mobile or tablet. When clicking on a navigation link, there is no reload of the page creating an optimized viewing experience. It's easy and quick to design making it ideal for a personal page, resume, or a small, lightweight business.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__content about-me hidden">
+                    <div class="about-me">
+                        <div>
+                            <h2>About Me</h2>
+                        </div>
+                        <div>
+                            <p>
+                                I was born in Canada in the year 1980. In my early teen years I quickly developed a taste for computers. However, life has a way of being life and I didn't persue the computer market that I had previously planned. For the past 20+ years I've been working as a cook but as COVID-19 hit the world, I decided to take a little control of myself and used the multiple times off work to learn some skills with the hope of one day working in the ever-growing market.
+                            </p>
+                            <p>
+                                Growing up, my dad had his own business. Even though I was young and didn't understand the processes of society, it seemed freeing. Since, I've always wanted to work for myself, and with the way the world has been recently, working remotely from home seems like a great idea.
+                            </p>
+                            <p>
+                                In September of 2020, I enrolled myself into a few courses on the <a href="https://www.udemy.com">Udemy</a> learning platform. So far I've taken courses in HTML, CSS, JavaScript, and Node.js (touching on MongoDB), with plans of doing courses in Python, PHP, Java and mobile development.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__content my-business hidden">
+                    <div>
+                        <h2>My Business</h2>
+                    </div>
+                    <div>
+                        <p>
+                            My goal is to be a full-stack web developer, which means: I can build what people see as well as the inner workings that people don't see, like handling payments, sending emails from a webpage or even fetching the current weather.
+                        </p>
+                        <p>
+                            I am just starting out, which means I have no experience in a lot of what this market demands (like working with a dev team). This is a dream of mine and I am willing to put all I can into this, whether it's a volunteer, intern, low-level position, or private contract. I'm quite eager and excited to being on this journey.
+                        </p>
+                        <p>
+                            For anyone reading this, it should be of note that I am currently working full-time as a cook until I get enough of web design work to support myself.
+                        </p>
+                    </div>
+                </section>
+                <section class="main__content my-creds hidden">
+                    <div>
+                        <h2>Credentials</h2>
+                    </div>
+                    <div>
+                        <!-- Thumbnail size = 120 x 90 -->
+                        <div class="row">
+                            <ul class="row">
+                                <li class="col span-1-of-2">
+                                    <a class="col span-1-of-2" href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3">Build Responsive Real World Website with HTML5 and CSS3</a>
+                                    <a class="col span-1-of-2" href="resources/img/html-cert.jpg"><img alt="html cert" src="resources/img/html-cert-small.jpg"></a>
+                                </li>
+                                <li class="col span-1-of-2">
+                                    <a class="col span-1-of-2" href="https://www.udemy.com/course/advanced-css-and-sass">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a>
+                                    <a class="col span-1-of-2" href="resources/img/css-cert.jpg"><img alt="html cert" src="resources/img/css-cert-small.jpg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul class="row">
+                                <li class="col span-1-of-2">
+                                    <a class="col span-1-of-2" href="https://www.udemy.com/course/the-complete-javascript-course">The Complete JavaScript Course 2021: From Zero to Expert</a>
+                                    <a class="col span-1-of-2" href="resources/img/js-cert. jpg"><img alt="html cert" src="resources/img/js-cert-small.jpg"></a>
+                                </li>
+                                <li class="col span-1-of-2">
+                                    <a class="col span-1-of-2" href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2">The Complete Node.js Developer Course (3rd Edition)</a>
+                                    <a class="col span-1-of-2" href="resources/img/node-cert.jpg"><img alt="html cert" src="resources/img/node-cert-small.jpg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__content my-portfolio hidden">
+                    <div>
+                        <h2 class="my-portfolio-heading">Portfolio</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-2">
+                            <p>Course Projects:
+                                <ul>
+                                    <li>
+                                        <a href="#">Forkify </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                    <li>
+                                        <a href="#">Weather API </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                    <li>
+                                        <a href="#">Web-Chat </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                    <li>
+                                        <a href="#">Omnifood </a>(<a href="https://github.com/TravisBriscoe/omnifood" target="_blank">github</a>)
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col span-1-of-2">
+                            <p>
+                                The links below are projects I made myself:
+                                <ul>
+                                    <li>
+                                        <a href="#">RPG Game </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                    <li>
+                                        <a href="#">Recipe Book </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog </a>(<a href="#" target="_blank">github</a>)
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div style="text-align: center;">
+                        <p style="text-align: center;">This is where my clients' sites will go (when I get some).</p>
+                    </div> -->
+                </section>
+                <section class="main__content contact-me hidden">
+                    <div class="contact">
+                        <h2>Contact Me!</h2>
+                        <div class="row">
+                            <form>
+                                <div class="col span-1-of-2">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col span-1-of-2">
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col span-1-of-2">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col span-1-of-2">
+                                        <input type="email" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col span-1-of-2">
+                                        <label>Phone number (optional)</label>
+                                    </div>
+                                    <div class="col span-1-of-2">
+                                    <input type="tel" placeholder="123 456 7890">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col span-1-of-2">
+                                        <label>Subject</label>
+                                    </div>
+                                    <div class="col span-1-of-2">
+                                        <input type="text" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col span-1-of-2">
+                                        <label>Your message</label>
+                                    </div>
+                                    <div class="col span-1-of-2"></div>
+                                        <textarea class="contact-form-msg" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col span-1-of-2 submit-contact-btn submit-contact-btn-animated">
+                                    <input type="submit" value="Send!">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
+        <footer>
+            <div class="footer-links">
+                <ul id="nav__external-links">
+                    <li>
+                        <a
+                        href="http://www.github.com/travisbriscoe"
+                        target="_blank"
+                        >Github</a
+                        >
+                    </li>
+                    <!-- <li>
+                        <a
+                        href="http://www.twitter.com/anomicaphasia"
+                        target="_blank"
+                        >Twitter</a
+                        >
+                    </li> -->
+                </ul>
+            </div>
+            <div>
+                <p>Copyright &copy; Travis Briscoe 2021</p>
+            </div>
+        </footer>
     </body>
 </html>
+    

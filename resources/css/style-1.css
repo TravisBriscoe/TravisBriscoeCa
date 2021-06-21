@@ -1,0 +1,227 @@
+/* ------------------------------------------------------------- */
+/* Basic Setup */
+/* ------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  font-size: 62.5%;
+}
+
+html {
+  width: 1140px;
+  height: 100vh;
+  background-color: #392bfa;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  color: #dbdbdb;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.hidden { display: none; }
+
+/* .opague {
+  visibility: hidden;
+} */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------------------- */
+/* Header setup */
+/* ------------------------------------------------------------- */
+header {
+  display: inherit;
+  flex-direction: column;
+  top: 14px;
+  position: relative;
+}
+
+.header__top--left {
+  flex-grow: 1;
+  flex-basis: 60;
+  float: left;
+}
+
+.header__top--right {
+  flex-grow: 2;
+  flex-basis: 40;
+  float: right;
+}
+
+
+.header__top--icon {
+  font-size: 20px;
+  padding-right: 6px;
+  color: #6e708f;
+}
+
+/* ------------------------------------------------------------- */
+/* Navigation */
+/* ------------------------------------------------------------- */
+.nav__bar {
+  position: absolute;
+  top: 50%;
+}
+
+.nav__bar--items {
+  display: block;
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #dbdbdb;
+  transition: color 0.2s
+}
+
+a:hover {
+  color: #747474;
+  cursor: default;
+}
+
+/* .nav__bar--replace-links {
+
+} */
+
+/* ------------------------------------------------------------- */
+/* Main Content */
+/* ------------------------------------------------------------- */
+section {
+  position: absolute;
+  top: 25%;
+  left: 15%; 
+  width: 85%;
+}
+
+section h2 {
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+.body__wrapper {
+  display: inherit;
+  flex-direction: row;
+  height: 75vh;
+  overflow-x: hidden;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* .main-content,
+.welcome,
+.about-me,
+.my-creds,
+.contact-me {
+  position: absolute;
+  top: 25%;
+  left: 15%; 
+  width: 85%;
+} */
+
+/* ------------------------------------------------------------- */
+/* Contact Page */
+/* ------------------------------------------------------------- */
+.contact {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.contact h2 { padding-right: 40px; }
+
+.contact-form-msg {
+  width: 250px;
+  height: 100px;
+}
+
+/* Submit Form */
+.submit-contact-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* .submit-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(161, 161, 161, 0.4);
+}
+
+.submit-contact-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(165, 165, 165, 0.4);
+}
+
+.submit-contact-btn::after { background-color: #fff; }
+
+.submit-contact-btn:hover::after {
+  transform: scaleX(0.8) scaleY(1.2);
+  opacity: 0;
+} */
+
+.submit-contact-btn input {
+  color: #6e708f;
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  /* position: relative; */
+}
+
+/* .submit-contact-btn::after {
+  content: "";
+  display: inline-block;
+  height: 10%;
+  width: 20%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  z-index: -1;
+  transition: all 0.4s;
+} */
+
+/* ------------------------------------------------------------- */
+/* Portfolia Page */
+/* ------------------------------------------------------------- */
+.my-portfolio {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 75%;
+} 
+
+.my-portfolio ul {
+  padding-top: 10px;
+  list-style: none;
+}
+
+/* ------------------------------------------------------------- */
+/* Footer */
+/* ------------------------------------------------------------- */
+footer {
+  display: relative;
+  text-align: center;
+}
+
+footer p { text-align: center; }
+
+.footer-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-links li {
+  list-style: none;
+  padding: 0 25px;
+}
