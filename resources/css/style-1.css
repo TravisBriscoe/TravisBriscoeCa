@@ -102,11 +102,12 @@ section {
   top: 25%;
   left: 15%; 
   width: 85%;
+  /* margin: 0 auto; */
 }
 
 section h2 {
   text-align: center;
-  padding-bottom: 13px;
+  padding: 0 4rem 0 1.3rem;
 }
 
 .body__wrapper {
@@ -115,7 +116,6 @@ section h2 {
   height: 75vh;
   overflow-x: hidden;
   position: relative;
-  margin-top: 40px;
 }
 
 /* .main-content,
@@ -137,7 +137,7 @@ section h2 {
   padding-right: 20%;
 }
 
-.contact h2 { padding-right: 40px; }
+/* .contact h2 { padding-right: 40px; } */
 
 .contact-form-msg {
   width: 250px;
@@ -193,17 +193,26 @@ section h2 {
 /* ------------------------------------------------------------- */
 /* Portfolia Page */
 /* ------------------------------------------------------------- */
-.my-portfolio {
+/* .my-portfolio {
   position: absolute;
   top: 40%;
   left: 25%;
   width: 75%;
-} 
+} */
+
+/* .my-portfolio h2 {
+  padding-right: 2rem;
+} */
+
+.my-portfolio .row {
+  margin-left: 6rem;
+  
+}
 
 .my-portfolio ul {
   padding-top: 10px;
   list-style: none;
-}
+} 
 
 /* ------------------------------------------------------------- */
 /* Footer */
