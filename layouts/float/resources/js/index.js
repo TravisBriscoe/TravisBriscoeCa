@@ -26,11 +26,13 @@ const contactMeLinkText = document.querySelector('.nav__bar-replace-links--conta
 
 //
 // Form data variabls
-// const inputName = document.querySelector('.contact-form-name');
-// const inputEmail = document.querySelector('.contact-form-email');
-// const inputTel = document.querySelector('.contact-form-tel');
-// const inputSubject = document.querySelector('.contact-form-subject');
-// const inputMsg = document.querySelector('.contact-form-msg');
+const contactForm = document.querySelector('.contact-form');
+const inputName = document.querySelector('.contact-form-name');
+const inputEmail = document.querySelector('.contact-form-email');
+const inputTel = document.querySelector('.contact-form-tel');
+const inputSubject = document.querySelector('.contact-form-subject');
+const inputMsg = document.querySelector('.contact-form-msg');
+const inputSubmit = document.querySelector('.contact-form-submit');
 
 //
 // Menu State
@@ -38,7 +40,7 @@ let menuState = 'aboutThisPageContent';
 aboutLink.classList.add('hidden');
 aboutLinkText.classList.remove('hidden');
 
-console.log(aboutMeLinkText)
+// console.log(aboutMeLinkText)
 
 //
 // Helper Function
@@ -50,8 +52,8 @@ const pageHide = function(visiting, left) {
   if (left === 'myCredsContent') { left = [credentialsLink, myCredsContent, credentialsLinkText]; }
   if (left === 'contactMeContent') { left = [contactMeLink, contactMeContent, contactMeLinkText]; }
 
-  console.log(left);
-  console.log(visiting);
+  // console.log(left);
+  // console.log(visiting);
 
   if (visiting === 'aboutThisPageContent' && left[0] !== aboutLink) {
     aboutThisPageContent.classList.remove('hidden');
@@ -102,37 +104,133 @@ const pageHide = function(visiting, left) {
 // Click handlers
 aboutLink.addEventListener('click', () => {
   pageHide('aboutThisPageContent', menuState)
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'aboutThisPageContent'
 });
 
 aboutMeLink.addEventListener('click', function() {
   pageHide('aboutMeContent', menuState);
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'aboutMeContent'
 });
 
 
 myBusinessLink.addEventListener('click', function() {
   pageHide('myBusinessContent', menuState)
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'myBusinessContent'
 });
 
 credentialsLink.addEventListener('click', function() {
   pageHide('myCredsContent', menuState)
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'myCredsContent'
 });
 
 portfolioLink.addEventListener('click', function() {
   pageHide('portfolioContent', menuState)
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'portfolioContent'
 });
 
 contactMeLink.addEventListener('click', function() {
   pageHide('contactMeContent', menuState)
-  console.log(menuState)
+  // console.log(menuState)
   menuState = 'contactMeContent'
 });
+
+//
+// Contact form
+
+/*
+const inputName = document.querySelector('.contact-form-name');
+const inputEmail = document.querySelector('.contact-form-email');
+const inputTel = document.querySelector('.contact-form-tel');
+const inputSubject = document.querySelector('.contact-form-subject');
+const inputMsg = document.querySelector('.contact-form-msg');
+*/
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  console.log('Test!')
+
+  let body = {
+    name: inputName.value,
+    email: inputEmail.value,
+    phone: inputTel.value,
+    subject: inputSubject.value,
+    message: inputMsg.value
+  };
+
+  // const sendData = {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: {
+  //     data: JSON.stringify(data),
+  //   },
+  // };
+
+  // console.log(data);
+
+  fetch('http://127.0.0.1:1234/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+    .then(response => console.log(response))
+    .then((data) => console.log(data))
+    .catch(err => console.log(err));
+})
+
+// inputSubmit.addEventListener('submit', (e) => {
+//   e.preventDefault;
+
+//   console.log('test!')
+
+//   const data = {
+//     name: inputName.value,
+//     email: inputEmail.value,
+//     phone: inputTel.value,
+//     subject: inputSubject.value,
+//     message: inputMsg.value,
+//   };
+// })
+//   // fetch('127.0.0.1:1234/contact', {
+//   //   method: 'POST',
+//   //   headers: {
+//   //     'Content-Type': 'application/json',
+//   //   },
+//   //   body: JSON.stringify(data)
+//   //   })
+//   // .then(data => JSONparse(data))
+//   // .then(res => console.log(res))
+//   // .catch(err => console.log(err));
+// })
+
+// inputSubmit.addEventListener('click', async (e) => {
+//   e.preventDefault();
+
+//   console.log('Test!')
+//   const data = {
+//     name: inputName.value,
+//     email: inputEmail.value,
+//     phone: inputTel.value,
+//     subject: inputSubject.value,
+//     message: inputMsg.value,
+//   };
+// });
+//   const sendContact = await fetch('127.0.0.1:1234/contact', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(data)
+//     })
+  
+//     sendContact.then(msg => console.log(msg)).catch(err => console.error(err));
+// });
