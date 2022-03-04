@@ -5,7 +5,7 @@ const aboutMeContent = document.querySelector(".about-me");
 const myBusinessContent = document.querySelector(".my-business");
 const myCredsContent = document.querySelector(".my-creds");
 const portfolioContent = document.querySelector(".my-portfolio");
-// const contactMeContent = document.querySelector('.contact-me');
+const contactMeContent = document.querySelector(".contact-me");
 
 //
 // Link Variables
@@ -14,7 +14,7 @@ const aboutMeLink = document.querySelector(".about-me--link");
 const myBusinessLink = document.querySelector(".my-business--link");
 const credentialsLink = document.querySelector(".my-credentials--link");
 const portfolioLink = document.querySelector(".my-portfolio--link");
-// const contactMeLink = document.querySelector('.contact-me--link');
+const contactMeLink = document.querySelector(".contact-me--link");
 
 // Alternating Text for Links
 const aboutLinkText = document.querySelector(".nav__bar-replace-links--page");
@@ -22,7 +22,7 @@ const aboutMeLinkText = document.querySelector(".nav__bar-replace-links--about")
 const myBusinessLinkText = document.querySelector(".nav__bar-replace-links--business");
 const credentialsLinkText = document.querySelector(".nav__bar-replace-links--creds");
 const portfolioLinkText = document.querySelector(".nav__bar-replace-links--port");
-// const contactMeLinkText = document.querySelector('.nav__bar-replace-links--contact');
+const contactMeLinkText = document.querySelector(".nav__bar-replace-links--contact");
 
 //
 // Form data variabls
@@ -60,7 +60,9 @@ const pageHide = function (visiting, left) {
 	if (left === "myCredsContent") {
 		left = [credentialsLink, myCredsContent, credentialsLinkText];
 	}
-	// if (left === 'contactMeContent') { left = [contactMeLink, contactMeContent, contactMeLinkText]; }
+	if (left === "contactMeContent") {
+		left = [contactMeLink, contactMeContent, contactMeLinkText];
+	}
 
 	// console.log(left);
 	// console.log(visiting);
@@ -100,15 +102,14 @@ const pageHide = function (visiting, left) {
 		left[0].classList.remove("hidden");
 		left[1].classList.add("hidden");
 		left[2].classList.add("hidden");
+	} else if (visiting === "contactMeContent" && left[0] !== contactMeLink) {
+		contactMeContent.classList.remove("hidden");
+		contactMeLinkText.classList.remove("hidden");
+		contactMeLink.classList.add("hidden");
+		left[0].classList.remove("hidden");
+		left[1].classList.add("hidden");
+		left[2].classList.add("hidden");
 	}
-	// } else if (visiting === 'contactMeContent' && left[0] !== contactMeLink) {
-	//   contactMeContent.classList.remove('hidden');
-	//   contactMeLinkText.classList.remove('hidden');
-	//   contactMeLink.classList.add('hidden');
-	//   left[0].classList.remove('hidden');
-	//   left[1].classList.add('hidden');
-	//   left[2].classList.add('hidden');
-	// }
 };
 
 //
@@ -143,11 +144,10 @@ portfolioLink.addEventListener("click", function () {
 	menuState = "portfolioContent";
 });
 
-// contactMeLink.addEventListener('click', function() {
-//   pageHide('contactMeContent', menuState)
-//   // console.log(menuState)
-//   menuState = 'contactMeContent'
-// });
+contactMeLink.addEventListener("click", function () {
+	pageHide("contactMeContent", menuState);
+	menuState = "contactMeContent";
+});
 
 //
 // Contact form
