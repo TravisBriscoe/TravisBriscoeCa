@@ -1,251 +1,248 @@
 /* ------------------------------------------------------------- */
-/* Reset and Basic Setup */
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------- */
+/* Basic Setup */
 body {
-  overflow-y: hidden;
-  font-size: 62.5%;
+	overflow-y: hidden;
+	font-size: 62.5%;
 }
 
 html {
-  width: 1140px;
-  height: 100vh;
-  background-color: #392bfa;
-  margin: 0 auto;
-  text-rendering: optimizeLegibility;
-  color: #dbdbdb;
-  font-family: 'Roboto Mono', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
+	width: 1140px;
+	height: 100vh;
+	background-color: #392bfa;
+	margin: 0 auto;
+	text-rendering: optimizeLegibility;
+	color: #dbdbdb;
+	font-family: "Roboto Mono", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
 }
 
-.hidden { display: none; }
+.hidden {
+	display: none;
+}
 
 .wrapper {
-  position: relative;
+	position: relative;
 }
 
 /* ------------------------------------------------------------- */
 /* Header setup */
 header {
-  position: relative;
+	position: relative;
 }
 
 .header__top--left {
-  position: absolute;
-  float: left;
-  top: 2rem;
-  z-index: 20;
+	position: absolute;
+	float: left;
+	top: 2rem;
+	z-index: 20;
 }
 .header__top--right {
-  position: absolute;
-  float: right;
-  top: 1.6rem;
-  right: 1rem;
-  z-index: 20;
+	position: absolute;
+	float: right;
+	top: 1.6rem;
+	right: 1rem;
+	z-index: 20;
 }
 
 .header__top--icon {
-  font-size: 20px;
-  padding-right: 6px;
-  color: #6e708f;
+	font-size: 20px;
+	padding-right: 6px;
+	color: #6e708f;
 }
 
 /* ------------------------------------------------------------- */
 /* Navigation */
 .nav__bar {
-  position: absolute;
-  top: 50%;
+	position: absolute;
+	top: 50%;
 }
 
 .nav__bar--items {
-  display: block;
-  list-style: none;
+	display: block;
+	list-style: none;
 }
 
 a:link,
 a:visited {
-  text-decoration: none;
-  color: #dbdbdb;
+	text-decoration: none;
+	color: #dbdbdb;
 }
 
 a:hover {
-  color: #747474;
-  cursor: default;
+	color: #747474;
+	cursor: default;
 }
 
 /* ------------------------------------------------------------- */
 /* Main Content */
 section {
-  position: absolute;
-  top: 30%;
-  left: 15%; 
-  width: 85%;
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	width: 85%;
 }
 
 section h2 {
-  text-align: center;
-  padding: 0 4rem 0 1.3rem;
+	text-align: center;
+	padding: 0 4rem 0 1.3rem;
 }
 
 .body__wrapper {
-  margin: 0 auto;
-  height: 100vh;
-  position: relative;
+	margin: 0 auto;
+	height: 100vh;
+	position: relative;
 }
 
 /* ------------------------------------------------------------- */
 /* Contact Page */
 .contact {
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-.contact-form-msg {
-  width: 250px;
-  height: 100px;
-}
-
-/* Submit Form */
-.submit-contact-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.submit-contact-btn input {
-  color: #6e708f;
-  background-color: #fff;
-  padding: 10px 15px;
-  border: 1px solid #c0c0c0;
-  border-radius: 10px;
-  text-transform: uppercase;
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 /* ------------------------------------------------------------- */
 /* Portfolia Page */
 .my-portfolio .row {
-  margin-left: 6rem;
-  
+	margin-left: 6rem;
 }
 
 .my-portfolio ul {
-  padding-top: 10px;
-  list-style: none;
-} 
+	padding-top: 10px;
+	list-style: none;
+}
 
 /* ------------------------------------------------------------- */
 /* Footer */
 footer {
-  display: block;
-  position: fixed;
-  left: 50%;
-  bottom: 2rem;
-  transform: translateX(-50%);
+	display: block;
+	position: fixed;
+	left: 50%;
+	bottom: 2rem;
+	transform: translateX(-50%);
 }
 
 footer p {
-  text-align: center;
+	text-align: center;
 }
 
 .footer-links li {
-  display: inline-block;
-  list-style: none;
-  padding: 0 25px;
+	display: inline-block;
+	list-style: none;
+	padding: 0 25px;
+}
+
+.sm-creds {
+	display: none;
 }
 
 /* ------------------------------------------------------------- */
-/* Media Queries */
+/* Media Queries (mobile first) */
 @media only screen and (max-width: 72.5em) {
-  html {
-    padding: 0 2rem;
-    width: 100%;
-  }
-  .nav__bar {
-    position: relative;
-    top: 1rem;
-    left: 2rem;
-  }
-  .header__top--left {
-    right: 0;
-    top: 1rem;
-  }
-  .header__top--right {
-    margin-top: 1rem;
-  } 
-  section {
-    margin-left: 2rem;
-    width: 65%;
-    font-size: .9rem;
-  } 
+	html {
+		padding: 0 2rem;
+		width: 100%;
+	}
+	.nav__bar {
+		position: relative;
+		top: 1rem;
+		left: 2rem;
+	}
+	.header__top--left {
+		right: 0;
+		top: 1rem;
+	}
+	.header__top--right {
+		margin-top: 1rem;
+	}
+	section {
+		margin-left: 2rem;
+		width: 65%;
+		font-size: 0.9rem;
+	}
 }
 
 @media only screen and (max-width: 63.5em) {
-  
-  section {
-    margin-left: 0;
-    left: 0;
-    width: 100%;  
-  }
+	section {
+		margin-left: 0;
+		left: 0;
+		width: 100%;
+	}
 
-  .nav__bar--items li {
-    padding-top: .3rem;
-  }
+	.nav__bar--items li {
+		padding-top: 0.3rem;
+	}
 
-  .nav__bar--items a:link {
-    background-color: rgba(49, 228, 252, 0.342);
-  }
+	.nav__bar--items a:link {
+		background-color: rgba(49, 228, 252, 0.342);
+	}
 
-  .my-creds {
-    width: 100%;
-    height: auto;
-  }
+	.my-creds {
+		width: 100%;
+		height: auto;
+	}
 }
 
 @media only screen and (max-width: 56.25em) {
-  .about-me {
-    top: 20%;
-  }
+	.about-me {
+		top: 20%;
+	}
 }
 
 @media only screen and (max-width: 50em) {
-  .about-me {
-    height: 50%;
-  }
+	.about-me {
+		height: 50%;
+	}
 }
 
 @media only screen and (max-width: 37.5em) {
- 
-  section {
-    font-size: 90%;
-  }
+	section {
+		font-size: 90%;
+	}
 
-  .nav__bar {
-    font-size: 82%;
-    top: 5rem;
-    left: 0;
-  }
-  .nav__bar--items li {
-    display: inline-block;
-  }
-  .about-me {
-    top: 30%;
-  }
-
-  .header__top--left {
-    right: 25%;
-  }
-  .header__top--right {
-    left: 25%;
-  } 
-}
-
-@media only screen and (max-width: 37.5em) {
-  .header__top--left {
-    left: 20%;
-    top: 1rem;
-  }
+	.nav__bar {
+		font-size: 82%;
+		top: 5rem;
+		left: 0;
+	}
+	.nav__bar--items li {
+		display: inline-block;
+	}
+	.about-me {
+		top: 30%;
+	}
+	.header__top--left {
+		right: 25%;
+	}
+	.header__top--right {
+		left: 25%;
+	}
+	.header__top--left {
+		left: 20%;
+		top: 1rem;
+	}
+	.big-creds {
+		display: none;
+	}
+	.sm-creds {
+		display: block;
+		font-size: 0.5rem;
+	}
+	.sm-creds-img {
+		width: 50%;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.jump-right {
+		margin-right: 2px;
+	}
 }
