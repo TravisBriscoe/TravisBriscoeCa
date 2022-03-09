@@ -230,14 +230,15 @@ footer p {
 		font-size: 1rem;
 	}
 	.header__top--right {
-		left: 20%;
+		left: 15%;
 		font-size: 0.5rem;
 		margin-bottom: 1rem;
 	}
+	.header__top--right a:first-child {
+		font-size: 0.45rem;
+	}
 	.header__top--left {
-		left: 20%;
-		/* right: 20%; */
-		top: 1rem;
+		left: 10%;
 	}
 	.nav__bar {
 		font-size: 82%;
@@ -265,10 +266,14 @@ footer p {
 	.jump-right {
 		margin-right: 2px;
 	}
+	footer {
+		position: absolute;
+		bottom: 0.5rem;
+	}
 	#footer__external-links {
-		font-size: 0.5rem;
+		font-size: 0.4rem;
 	}
 	footer p {
-		font-size: 0.44rem;
+		font-size: 0.5rem;
 	}
 }
