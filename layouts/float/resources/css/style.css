@@ -103,10 +103,9 @@ section h2 {
 }
 
 /* ------------------------------------------------------------- */
-/* Contact Page */
-.contact {
-	padding-left: 20%;
-	padding-right: 20%;
+/* Credentials Page */
+.sm-span {
+	width: 49.2%;
 }
 
 /* ------------------------------------------------------------- */
@@ -118,6 +117,13 @@ section h2 {
 .my-portfolio ul {
 	padding-top: 10px;
 	list-style: none;
+}
+
+/* ------------------------------------------------------------- */
+/* Contact Page */
+.contact {
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 /* ------------------------------------------------------------- */
@@ -138,10 +144,6 @@ footer p {
 	display: inline-block;
 	list-style: none;
 	padding: 0 25px;
-}
-
-.sm-creds {
-	display: none;
 }
 
 /* ------------------------------------------------------------- */
@@ -201,37 +203,6 @@ footer p {
 	.about-me {
 		height: 50%;
 	}
-}
-
-@media only screen and (max-width: 37.5em) {
-	section {
-		font-size: 90%;
-	}
-
-	.nav__bar {
-		font-size: 82%;
-		top: 5rem;
-		left: 0;
-	}
-	.nav__bar--items li {
-		display: inline-block;
-	}
-	.about-me {
-		top: 30%;
-	}
-	.header__top--left {
-		right: 25%;
-	}
-	.header__top--right {
-		left: 25%;
-	}
-	.header__top--left {
-		left: 20%;
-		top: 1rem;
-	}
-	.big-creds {
-		display: none;
-	}
 	.sm-creds {
 		display: block;
 		font-size: 0.5rem;
@@ -244,5 +215,60 @@ footer p {
 	}
 	.jump-right {
 		margin-right: 2px;
+	}
+	.sm-span {
+		width: 49.2%;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	section {
+		font-size: 90%;
+	}
+	.header__top--left,
+	h1 {
+		font-size: 1rem;
+	}
+	.header__top--right {
+		left: 20%;
+		font-size: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	.header__top--left {
+		left: 20%;
+		/* right: 20%; */
+		top: 1rem;
+	}
+	.nav__bar {
+		font-size: 82%;
+		top: 5rem;
+		left: 0;
+	}
+	.nav__bar--items li {
+		display: inline-block;
+	}
+	section h2 {
+		padding: 0 1.3rem 0.3rem 1.3rem;
+	}
+	.about-me {
+		top: 30%;
+	}
+	.sm-creds {
+		font-size: 0.5rem;
+	}
+	.sm-creds-img {
+		width: 50%;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.jump-right {
+		margin-right: 2px;
+	}
+	#footer__external-links {
+		font-size: 0.5rem;
+	}
+	footer p {
+		font-size: 0.44rem;
 	}
 }
