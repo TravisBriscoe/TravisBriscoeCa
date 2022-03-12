@@ -9,7 +9,7 @@
 /* ------------------------------------------------------------- */
 /* Basic Setup */
 body {
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 	font-size: 62.5%;
 }
 
@@ -43,14 +43,14 @@ header {
 	position: absolute;
 	float: left;
 	top: 2rem;
-	z-index: 20;
+	/* z-index: 1; */
 }
 .header__top--right {
 	position: absolute;
 	float: right;
 	top: 1.6rem;
 	right: 1rem;
-	z-index: 20;
+	/* z-index: 1; */
 }
 
 .header__top--icon {
@@ -75,11 +75,17 @@ a:link,
 a:visited {
 	text-decoration: none;
 	color: #dbdbdb;
+	/* background-color: black; */
 }
 
 a:hover {
 	color: #747474;
 	cursor: default;
+}
+
+.sm-nav__bar--icon,
+.sm-nav__bar--checkbox {
+	display: none;
 }
 
 /* ------------------------------------------------------------- */
@@ -222,6 +228,10 @@ footer p {
 }
 
 @media only screen and (max-width: 37.5em) {
+	html {
+		padding: 0 1rem;
+		width: 100%;
+	}
 	section {
 		font-size: 90%;
 	}
@@ -242,8 +252,23 @@ footer p {
 	}
 	.nav__bar {
 		font-size: 82%;
-		top: 5rem;
-		left: 0;
+		/* top: 5rem;
+		left: 0; */
+		width: 45%;
+		top: 1.5rem;
+		left: -30px;
+	}
+	.nav__bar--nav {
+		display: none;
+		margin: 0 auto;
+		/* border-right: 2px solid black; */
+		box-shadow: 10px gray;
+		z-index: 30;
+
+		transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+	}
+	.nav__bar--items a {
+		background-color: black;
 	}
 	.nav__bar--items li {
 		display: inline-block;
@@ -275,5 +300,82 @@ footer p {
 	}
 	footer p {
 		font-size: 0.5rem;
+	}
+	.sm-nav__bar--checkbox {
+		position: fixed;
+		/* top: 1px; */
+		left: 0.3rem;
+		top: 1.2rem;
+		opacity: 0;
+		width: 0.6rem;
+		display: block;
+		padding-left: 0.5rem;
+		z-index: 4000;
+	}
+	.sm-nav__background {
+		position: fixed;
+		background-color: black;
+		width: 40%;
+		top: 1.2rem;
+		height: 18vh;
+		display: none;
+		z-index: 20;
+		/* opacity: 1; */
+
+		transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+	}
+	.sm-nav__bar--checkbox:checked ~ .sm-nav__background {
+		display: block;
+	}
+	.sm-nav__bar--checkbox:checked ~ .nav__bar--nav {
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+		height: 18vh;
+		display: block;
+
+		transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+	.sm-nav__bar--checkbox:checked + .sm-nav__bar--label .sm-nav__bar--icon {
+		background-color: transparent;
+	}
+	.sm-nav__bar--checkbox:checked + .sm-nav__bar--label .sm-nav__bar--icon::before {
+		transform: rotate(130deg);
+		background-color: white;
+		top: 0;
+	}
+	.sm-nav__bar--checkbox:checked + .sm-nav__bar--label .sm-nav__bar--icon::after {
+		transform: rotate(-130deg);
+		background-color: white;
+		top: 0;
+	}
+	.sm-nav__bar--icon {
+		position: relative;
+		z-index: 4000;
+		margin-left: 0.5rem;
+	}
+	.sm-nav__bar--icon,
+	.sm-nav__bar--icon::before,
+	.sm-nav__bar--icon::after {
+		height: 1.5px;
+		width: 0.6rem;
+		display: inline-block;
+		background-color: black;
+	}
+
+	.sm-nav__bar--icon::before,
+	.sm-nav__bar--icon::after {
+		content: "";
+		left: 0;
+		transition: all 0.2s;
+	}
+
+	.sm-nav__bar--icon::before {
+		position: absolute;
+		top: -0.2rem;
+	}
+	.sm-nav__bar--icon::after {
+		position: absolute;
+		top: 0.2rem;
 	}
 }
