@@ -106,6 +106,7 @@ section h2 {
 	margin: 0 auto;
 	height: 100vh;
 	position: relative;
+	width: 100%;
 }
 
 /* ------------------------------------------------------------- */
@@ -156,7 +157,7 @@ footer p {
 /* Media Queries (mobile first) */
 @media only screen and (max-width: 72.5em) {
 	html {
-		padding: 0 2rem;
+		padding: 0 0.3rem;
 		width: 100%;
 	}
 	.nav__bar {
@@ -201,14 +202,14 @@ footer p {
 
 @media only screen and (max-width: 56.25em) {
 	.about-me {
-		top: 20%;
+		top: 10%;
 	}
 }
 
 @media only screen and (max-width: 50em) {
-	.about-me {
+	/* .about-me {
 		height: 50%;
-	}
+	} */
 	.sm-creds {
 		display: block;
 		font-size: 0.5rem;
@@ -234,6 +235,7 @@ footer p {
 	}
 	section {
 		font-size: 90%;
+		width: 100%;
 	}
 	.header__top--left,
 	h1 {
@@ -277,7 +279,7 @@ footer p {
 		padding: 0 1.3rem 0.3rem 1.3rem;
 	}
 	.about-me {
-		top: 30%;
+		top: 25%;
 	}
 	.sm-creds {
 		font-size: 0.5rem;
@@ -342,12 +344,12 @@ footer p {
 	.sm-nav__bar--checkbox:checked + .sm-nav__bar--label .sm-nav__bar--icon::before {
 		transform: rotate(130deg);
 		background-color: white;
-		top: 0;
+		top: 0.2rem;
 	}
 	.sm-nav__bar--checkbox:checked + .sm-nav__bar--label .sm-nav__bar--icon::after {
 		transform: rotate(-130deg);
 		background-color: white;
-		top: 0;
+		top: 0.2rem;
 	}
 	.sm-nav__bar--icon {
 		position: relative;
@@ -377,5 +379,14 @@ footer p {
 	.sm-nav__bar--icon::after {
 		position: absolute;
 		top: 0.2rem;
+	}
+	.welcome p,
+	.about-me p,
+	.my-business p {
+		font-size: 0.5rem;
+	}
+	.contact {
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 }
