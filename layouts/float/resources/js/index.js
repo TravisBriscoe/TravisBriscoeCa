@@ -6,6 +6,7 @@ const myBusinessContent = document.querySelector(".my-business");
 const myCredsContent = document.querySelector(".my-creds");
 const portfolioContent = document.querySelector(".my-portfolio");
 const contactMeContent = document.querySelector(".contact-me");
+const smNavCheck = document.querySelector(".sm-nav__bar--checkbox");
 
 //
 // Media Query
@@ -101,6 +102,9 @@ const pageHide = function (visiting, left) {
 		left[1].classList.add("hidden");
 		left[2].classList.add("hidden");
 	}
+	if (window.innerWidth < 400 && smNavCheck.checked) {
+		smNavCheck.checked = false;
+	}
 };
 
 //
@@ -142,7 +146,6 @@ contactMeLink.addEventListener("click", function () {
 
 //
 // Media Query function
-
 function watchMediaChange() {
 	if (window.innerWidth < 400) {
 		bigCreds.classList.add("hidden");

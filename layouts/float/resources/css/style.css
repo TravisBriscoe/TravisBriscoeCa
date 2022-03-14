@@ -43,14 +43,14 @@ header {
 	position: absolute;
 	float: left;
 	top: 2rem;
-	/* z-index: 1; */
+	z-index: 1;
 }
 .header__top--right {
 	position: absolute;
 	float: right;
 	top: 1.6rem;
 	right: 1rem;
-	/* z-index: 1; */
+	z-index: 1;
 }
 
 .header__top--icon {
@@ -75,7 +75,6 @@ a:link,
 a:visited {
 	text-decoration: none;
 	color: #dbdbdb;
-	/* background-color: black; */
 }
 
 a:hover {
@@ -254,8 +253,6 @@ footer p {
 	}
 	.nav__bar {
 		font-size: 82%;
-		/* top: 5rem;
-		left: 0; */
 		width: 45%;
 		top: 1.5rem;
 		left: -30px;
@@ -263,14 +260,15 @@ footer p {
 	.nav__bar--nav {
 		display: none;
 		margin: 0 auto;
-		/* border-right: 2px solid black; */
-		box-shadow: 10px gray;
 		z-index: 30;
 
 		transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
 	}
 	.nav__bar--items a {
 		background-color: black;
+	}
+	.nav__bar--items span {
+		background-color: #392bfa;
 	}
 	.nav__bar--items li {
 		display: inline-block;
@@ -319,7 +317,7 @@ footer p {
 		background-color: black;
 		width: 40%;
 		top: 1.2rem;
-		height: 18vh;
+		height: 26vh;
 		display: none;
 		z-index: 20;
 		/* opacity: 1; */
@@ -333,7 +331,7 @@ footer p {
 		position: absolute;
 		top: 0.5rem;
 		left: 0.5rem;
-		height: 18vh;
+		height: 26vh;
 		display: block;
 
 		transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
