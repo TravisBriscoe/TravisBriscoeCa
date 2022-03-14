@@ -285,6 +285,13 @@ footer p {
 	.sm-creds-img {
 		width: 50%;
 	}
+	.my-projects {
+		margin-top: 1rem;
+		width: 75%;
+	}
+	.my-projects li:last-child {
+		padding-top: 0.1rem;
+	}
 	.text-center {
 		text-align: center;
 	}
