@@ -9,6 +9,16 @@ const contactMeContent = document.querySelector(".contact-me");
 const smNavCheck = document.querySelector(".sm-nav__bar--checkbox");
 
 //
+// Contact Page variables
+const contactForm = document.querySelector(".contact-form");
+const contactFormName = document.querySelector("#fname");
+const contactFormEmail = document.querySelector("#email");
+const contactFormTel = document.querySelector("#tel");
+const contactFormSubject = document.querySelector("#subject");
+const contactFormMessage = document.querySelector("#message");
+const mailLog = document.querySelector("#log-messages");
+
+//
 // Media Query
 const viewWidth = window.matchMedia("(max-width: 375px)");
 const bigCreds = document.querySelector(".big-creds");
@@ -158,3 +168,55 @@ function watchMediaChange() {
 
 window.addEventListener("resize", watchMediaChange);
 watchMediaChange();
+
+//
+// Contact Me Form functions
+contactForm.addEventListener("submit", (event) => {
+	event.preventDefault();
+
+	const body = {
+		name: contactFormName.value,
+		email: contactFormEmail.value,
+		tel: contactFormTel.value,
+		subject: contactFormSubject.value,
+		message: contactFormMessage.value,
+	};
+
+	fetch("http://www.travisbriscoe.ca:12389", {
+		method: "POST",
+		mode: "cors",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify(body),
+	})
+		.then(() => {
+			mailLog.innerHTML = `<p style="color: green; font-style: italic;">Mail sent Successfully!</p>`;
+
+			contactFormName.value =
+				contactFormEmail.value =
+				contactFormTel.value =
+				contactFormSubject.value =
+				contactFormMessage.value =
+					"";
+
+			setTimeout(() => {
+				mailLog.innerHTML = `<br />`;
+			}, 3000);
+		})
+		.catch((err) => {
+			console.log(err);
+
+			mailLog.innerHTML = `<p style="color: red; font-style: italic">Mail not sent! Please try again.</p>`;
+
+			contactFormName.value =
+				contactFormEmail.value =
+				contactFormTel.value =
+				contactFormSubject.value =
+				contactFormMessage.value =
+					"";
+
+			setTimeout(() => {
+				mailLog.innteHTML = `<br/>`;
+			}, 3000);
+		});
+});

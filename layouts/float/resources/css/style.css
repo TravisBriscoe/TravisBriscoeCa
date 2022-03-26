@@ -113,6 +113,14 @@ section h2 {
 .sm-span {
 	width: 49.2%;
 }
+.big-creds {
+	font-size: 0.5rem;
+}
+
+.big-creds img {
+	/* border-radius: 50%; */
+	width: 35%;
+}
 
 /* ------------------------------------------------------------- */
 /* Portfolia Page */
@@ -130,6 +138,25 @@ section h2 {
 .contact {
 	padding-left: 20%;
 	padding-right: 20%;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
+.contact-form input {
+	padding: 2px;
+}
+.contact-form textarea {
+	height: 100px;
+}
+
+.contact-submit {
+	position: relative;
+	text-align: center;
+	padding-top: 1.5rem;
+}
+.contact-submit input[type="submit"] {
+	width: 4rem;
 }
 
 /* ------------------------------------------------------------- */
@@ -153,7 +180,8 @@ footer p {
 }
 
 /* ------------------------------------------------------------- */
-/* Media Queries (mobile first) */
+/* Media Queries */
+
 @media only screen and (max-width: 72.5em) {
 	html {
 		padding: 0 0.3rem;
@@ -393,5 +421,16 @@ footer p {
 	.contact {
 		padding-left: 5%;
 		padding-right: 5%;
+		font-size: 0.8rem;
+	}
+
+	.contact-form {
+		font-size: 0.6rem;
+	}
+	.contact-form textarea {
+		height: 90px;
+	}
+	.contact-submit {
+		padding-top: 0.5rem;
 	}
 }
