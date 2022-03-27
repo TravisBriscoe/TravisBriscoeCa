@@ -182,7 +182,7 @@ contactForm.addEventListener("submit", (event) => {
 		message: contactFormMessage.value,
 	};
 
-	fetch("http://www.travisbriscoe.ca:12389", {
+	fetch("https://www.travisbriscoe.ca:12389", {
 		method: "POST",
 		mode: "cors",
 		headers: { "Content-Type": "application/json" },
